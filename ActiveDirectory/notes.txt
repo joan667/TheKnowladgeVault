@@ -1,0 +1,81 @@
+What is Active Directory?
+
+Active Directory (AD) is a directory service developed by Microsoft for Windows domain networks. It is used to organize, manage, and secure the resources of a network, such as users, computers, printers, and other devices. Think of it as a central database that stores information about everything in a network and controls access to those resources.
+
+Key points about Active Directory:
+
+ - Centralized Management: AD allows administrators to manage users, groups, and devices from a single location. For example, you can create a user account and automatically grant access to network resources.
+
+ - Authentication and Authorization: AD verifies (authenticates) the identity of users when they log in and determines what resources they can access (authorization).
+
+ - Hierarchical Structure: AD uses a hierarchical structure that includes:
+
+    - Domains: The main organizational unit.
+
+    - Organizational Units (OUs): Subdivisions within a domain for easier management.
+
+    - Trees and Forests: Collections of domains that form a network-wide structure.
+
+    - Group Policies: AD allows administrators to enforce rules and settings across users and computers, like password complexity requirements or software installation policies.
+
+
+*
+The following is a very simplified example that shows a possible hierarchical structure of AD in a company
+
+Forest: company.com
+│
+├── Tree 1: us.company.com
+│   ├── Domain Controller (DC1-US)
+│   ├── OUs:
+│   │   ├── Sales
+│   │   │   ├── Users
+│   │   │   └── Computers
+│   │   ├── IT
+│   │   │   ├── Users
+│   │   │   └── Computers
+│   │   └── HR
+│   │       ├── Users
+│   │       └── Computers
+│   └── Shared Resources:
+│       ├── File Servers
+│       └── Printers
+│
+├── Tree 2: europe.company.com
+│   ├── Domain Controller (DC1-EU)
+│   ├── OUs:
+│   │   ├── Sales
+│   │   ├── IT
+│   │   └── HR
+│   └── Shared Resources:
+│       ├── File Servers
+│       └── Printers
+│
+└── Tree 3: asia.company.com
+    ├── Domain Controller (DC1-APAC)
+    ├── OUs:
+    │   ├── Sales
+    │   ├── IT
+    │   └── HR
+    └── Shared Resources:
+        ├── File Servers
+        └── Printers
+
+*
+
+
+
+What is a domain controller?
+
+A Domain Controller is a server in an Active Directory environment that stores the Active Directory database and manages all security-related aspects of a domain. Its main responsibilities include:
+
+ - Authentication: Verifying the identity of users and computers when they log in.
+
+ - Authorization: Determining what resources users or computers can access.
+
+ - Policy Enforcement: Applying Group Policies across users and computers.
+
+ - Replication: Keeping the Active Directory database synchronized across multiple DCs in the domain.
+
+In short, the Domain Controller acts as the “gatekeeper” and central manager of the domain.
+
+

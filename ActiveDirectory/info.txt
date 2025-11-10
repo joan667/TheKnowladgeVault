@@ -1,0 +1,4 @@
+The purpose o this folder is to practice AD in a docker environament:
+
+10/11/2025 -> By now there's a litle explanation in notes.txt of what is in Active Directory and a .yaml file to genreate a docker container to practice AD.
+
