@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  ad:
+    image: ubuntu:24.04
+    container_name: ad
+    hostname: ad.example.com
+    environment:
+      TZ: "Europe/Madrid"
+    ports:
+      - "53:53"     # DNS
+      - "88:88"     # Kerberos
+      - "389:389"   # LDAP
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./data:/data
+    command: tail -f /dev/null
+
