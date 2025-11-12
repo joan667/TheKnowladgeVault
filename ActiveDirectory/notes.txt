@@ -79,3 +79,30 @@ A Domain Controller is a server in an Active Directory environment that stores t
 In short, the Domain Controller acts as the “gatekeeper” and central manager of the domain.
 
 
+Our use case:
+
+To get started wit active directory we are going to set up a basic active directory in an docker image based on ubuntu (maybe the same set up is going to be set up in a windows server virtual machine at some point).
+
+we will be using the following services:
+
+--On the server/docker container side (mandatory)
+samba: This is the package that we will be using to set up our DC. On instalation it may requre you some domain, realms etc... leave that blank by the moment we will be configuring it manually later.
+
+apt install -y samba
+
+--On the client side (same container,other container or host machine):
+
+-dnsutils: to play with dns against de dc.
+-krb5-user: for autenitcating with kerberos against the DC.
+
+apt install -y krb5-user dnsutils
+
+
+Before setting the DC with SAMBA i think is a good starting point to know what are we going to be sestting up and showing a tipical example of what really happens underneath with a real example.
+
+
+
+
+
+
+

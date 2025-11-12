@@ -8,7 +8,7 @@ services:
     environment:
       TZ: "Europe/Madrid"
     ports:
-      - "53:53"     # DNS
+      - "5353:53"     # DNS
       - "88:88"     # Kerberos
       - "389:389"   # LDAP
     tty: true
